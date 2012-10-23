@@ -1,5 +1,21 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+    h1= title
+    p Welcome to #{title}
+    input#msg(type='text')
+    button#send(value='Send Message') Send Message
+    a(href="#modalBox") Open Modal
+    div#template
+        {{name}} said {{data}}
+    div#container
+        div.modal#modalBox
+            div
+                a(href="#close", title="Close", class="close") X
+                h2 Important Information
+                p This is very important message to redeem your offer.
+                p Click here to continue
+                div#offerData
+
+
+
